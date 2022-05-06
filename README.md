@@ -33,4 +33,4 @@ Scale: kubectl scale -n default deployment DEPLOYMENT_NAME --replicas=5
 3. load image dans pod
 
 ## pour finir bonus:
-- Il faut connecter react avec backend. Dans ce cas avec node_redis.
+- Il reste à faire un service pour gerer backend pour react. Il faut que react se communique avec node_redis.
