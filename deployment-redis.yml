@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: natalia-redis
+  labels:
+    app: natalia-redis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: natalia-redis
+  template:
+    metadata:
+      labels:
+        app: natalia-redis
+    spec:
+      containers:
+      - name: natalia-redis
+        image: redis
+        ports:
+          - containerPort: 6379

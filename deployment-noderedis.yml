@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: natalia-noderedis
+  labels:
+    app: natalia-noderedis
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: natalia-noderedis
+  template:
+    metadata:
+      labels:
+        app: natalia-noderedis
+    spec:
+      imagePullSecrets:
+      - name: regcred
+      containers:
+      - name: natalia-noderedis
+        image: cloud.canister.io:5000/arhturescriou/node-redis
+        ports:
+          - containerPort: 8080
+        env:
+          - name: PORT
+            value: '6379'
+          - name: REDIS_URL
+            value: redis://10.3.179.188
