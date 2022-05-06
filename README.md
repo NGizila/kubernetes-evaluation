@@ -31,3 +31,6 @@ Scale: kubectl scale -n default deployment DEPLOYMENT_NAME --replicas=5
 1. Dockerfile
 2. push image vers docker hub - image est present comme: ngizila/bonus-react:1.0.0
 3. load image dans pod
+
+## pour finir bonus:
+- Il faut connecter react avec backend. Dans ce cas avec node_redis.
