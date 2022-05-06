@@ -5,7 +5,7 @@
 # Explications:
 
 - deployment-redis.yml - un fichier qui déploie un serveur redis
-- deployment-noderedis.yml -
+- deployment-noderedis.yml - il déploie des nodes pour parler avec le serveur
 - service-redis.yml - un service qui permet d'accèder le serveur redis sur le port 6379 (c'est un port de redis). La connection est effectuée dans le cluster d'ou cluster ip dans redis_url
 
 
