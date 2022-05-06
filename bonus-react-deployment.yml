@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: natalia-bonus
+  labels:
+    app: natalia-bonus
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: natalia-bonus
+  template:
+    metadata:
+      labels:
+        app: natalia-bonus
+    spec:
+      containers:
+      - name: natalia-bonus
+        image: ngizila/bonus-react:1.0.0
+        imagePullPolicy: IfNotPresent
+        ports:
+          - containerPort: 80
